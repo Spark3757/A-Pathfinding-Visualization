@@ -1,4 +1,3 @@
-
 /* Node.java is an object used for every node (or block)
  * on the grid for path finding. Including walls, open, closed
  * path, start and end nodes. This class allows each node to
@@ -7,67 +6,64 @@
  * by Devon Crawford
  */
 public class Node {
-	private int x, y, g, h, f;
-	private Node parent;
-	
-	public Node(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
+    private int x, y, g, h, f;
+    private Node parent;
 
-	public int getX() {
-		return x;
-	}
+    public Node(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 
-	public int getY() {
-		return y;
-	}
+    public static boolean isEqual(Node s, Node e) {
+        return s.getX() == e.getX() && s.getY() == e.getY();
+    }
 
-	public int getG() {
-		return g;
-	}
+    public int getX() {
+        return x;
+    }
 
-	public int getH() {
-		return h;
-	}
+    public int getY() {
+        return y;
+    }
 
-	public int getF() {
-		return f;
-	}
+    public int getG() {
+        return g;
+    }
 
-	public Node getNode() {
-		return parent;
-	}
-	
-	public Node getParent() {
-		return parent;
-	}
+    public void setG(int g) {
+        this.g = g;
+    }
 
-	public void setXY(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
+    public int getH() {
+        return h;
+    }
 
-	public void setG(int g) {
-		this.g = g;
-	}
+    public void setH(int h) {
+        this.h = h;
+    }
 
-	public void setH(int h) {
-		this.h = h;
-	}
+    public int getF() {
+        return f;
+    }
 
-	public void setF(int f) {
-		this.f = f;
-	}
+    public void setF(int f) {
+        this.f = f;
+    }
 
-	public void setParent(Node parent) {
-		this.parent = parent;
-	}
+    public Node getNode() {
+        return parent;
+    }
 
-	public static boolean isEqual(Node s, Node e) {
-		if (s.getX() == e.getX() && s.getY() == e.getY()) {
-			return true;
-		}
-		return false;
-	}
+    public Node getParent() {
+        return parent;
+    }
+
+    public void setParent(Node parent) {
+        this.parent = parent;
+    }
+
+    public void setXY(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 }
